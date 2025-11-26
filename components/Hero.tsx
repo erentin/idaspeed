@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Mail } from 'lucide-react';
 import { Language, Content } from '../types';
 
@@ -8,20 +8,43 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ lang, content }) => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Use requestAnimationFrame for smooth performance
+      requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div id="hero" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-brand-navy">
-      {/* Background Image - Concept: Modern European highway with a clean, branded semi-truck */}
-      <div className="absolute inset-0 z-0">
-         <img 
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop" 
-            alt="European Logistics Truck on Highway" 
-            className="w-full h-full object-cover opacity-40 scale-105 animate-slow-zoom"
-         />
-         {/* Gradient Overlay for text readability and premium feel */}
+      {/* Background Image Container with Parallax */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+         <div 
+            className="absolute inset-0 w-full h-full"
+            style={{ 
+              transform: `translateY(${scrollY * 0.4}px)`,
+              willChange: 'transform'
+            }}
+         >
+            <img 
+                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop" 
+                alt="European Logistics Truck on Highway" 
+                // Increased height and negative top margin to create buffer for parallax movement
+                className="absolute w-full h-[130%] -top-[30%] object-cover opacity-40 scale-105"
+            />
+         </div>
+         {/* Gradient Overlays - Fixed to container */}
          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/70 to-brand-navy/20"></div>
          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent"></div>
       </div>
