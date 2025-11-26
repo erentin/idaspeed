@@ -29,8 +29,16 @@ const Footer: React.FC<FooterProps> = ({ lang, content }) => {
             <div>
                 <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
                 <ul className="space-y-3 text-sm">
-                    <li><a href="#" className="hover:text-brand-red transition-colors">{content.terms[lang]}</a></li>
-                    <li><a href="#" className="hover:text-brand-red transition-colors">{content.privacy[lang]}</a></li>
+                    <li>
+                        <a href="#" className="relative hover:text-brand-red transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-brand-red after:transition-all after:duration-300 hover:after:w-full">
+                            {content.terms[lang]}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="relative hover:text-brand-red transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-brand-red after:transition-all after:duration-300 hover:after:w-full">
+                            {content.privacy[lang]}
+                        </a>
+                    </li>
                 </ul>
             </div>
             
