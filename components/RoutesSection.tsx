@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Clock, ArrowRight } from 'lucide-react';
 import { Language, Content } from '../types';
 
 interface RoutesProps {

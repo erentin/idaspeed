@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Package, Check, Truck, MapPin, FileText } from 'lucide-react';
+import { Search, Package, Truck, MapPin, FileText } from 'lucide-react';
 import { Language, Content } from '../types';
 
 interface TrackingProps {
