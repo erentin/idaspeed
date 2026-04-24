@@ -1,5 +1,5 @@
-import React from 'react';
-import { Send, FileText } from 'lucide-react';
+import React, { useState } from 'react';
+import { Send } from 'lucide-react';
 import { Language, Content } from '../types';
 
 interface QuoteProps {
@@ -7,76 +7,89 @@ interface QuoteProps {
   content: Content['quote'];
 }
 
+const labels = {
+  section: { bg: 'Оферта', tr: 'Teklif', en: 'Quote', ru: 'Запрос' },
+  sla: { bg: 'Отговор в рамките на 2 часа', tr: '2 saat içinde geri dönüş', en: 'Response within 2 hours', ru: 'Ответ в течение 2 часов' },
+};
+
+const fieldCls =
+  'w-full bg-transparent border-0 border-b hairline focus:border-gold outline-none py-3 text-cream placeholder-slate/50 transition-colors';
+
 const Quote: React.FC<QuoteProps> = ({ lang, content }) => {
+  const [sent, setSent] = useState(false);
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const body = Array.from(data.entries())
+      .map(([k, v]) => `${k}: ${v}`)
+      .join('\n');
+    window.location.href = `mailto:info@idaspeed.com?subject=Quote%20Request&body=${encodeURIComponent(body)}`;
+    setSent(true);
+  };
+
   return (
-    <div id="quote" className="py-24 bg-brand-navy relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-            <span className="inline-block p-3 rounded-full bg-brand-red/20 text-brand-red mb-4">
-                <FileText className="w-8 h-8" />
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">{content.title[lang]}</h2>
-            <p className="text-gray-400 text-lg">{content.subtitle[lang]}</p>
+    <section id="quote" className="relative py-28 lg:py-36 bg-ink">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="flex items-center gap-4 font-mono-label text-gold">
+          <span>06 — {labels.section[lang]}</span>
+          <span className="hairline border-t flex-1" />
         </div>
 
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <div className="h-2 bg-brand-red w-full"></div>
-            <form className="p-8 md:p-12 space-y-6">
-                
-                {/* Contact Info Group */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">{content.fields.company[lang]}</label>
-                        <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">{content.fields.contactPerson[lang]}</label>
-                        <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" />
-                    </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">{content.fields.email[lang]}</label>
-                        <input type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">{content.fields.phone[lang]}</label>
-                        <input type="tel" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" />
-                    </div>
-                </div>
+        <div className="mt-10 grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <div className="lg:col-span-5">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tightest text-cream leading-[1.05]">
+              {content.title[lang]}
+            </h2>
+            <p className="mt-6 text-slate text-lg leading-relaxed">{content.subtitle[lang]}</p>
+            <div className="mt-8 inline-flex items-center gap-2 border hairline rounded-full px-4 py-2 font-mono-label text-gold">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+              {labels.sla[lang]}
+            </div>
+          </div>
 
-                {/* Route Group */}
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">{content.fields.origin[lang]}</label>
-                            <input type="text" className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" placeholder="Country, City" />
-                        </div>
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">{content.fields.destination[lang]}</label>
-                            <input type="text" className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" placeholder="Country, City" />
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">{content.fields.cargo[lang]}</label>
-                    <textarea rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all"></textarea>
-                </div>
-
-                <div className="pt-4">
-                    <button type="button" className="w-full bg-brand-red hover:bg-red-700 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-xl flex items-center justify-center text-lg">
-                        {content.submit[lang]}
-                        <Send className="ml-2 h-5 w-5" />
-                    </button>
-                </div>
-            </form>
+          <form onSubmit={onSubmit} className="lg:col-span-7 bg-obsidian border hairline rounded-2xl p-8 md:p-12 space-y-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <label className="block">
+                <span className="font-mono-label text-slate">{content.fields.company[lang]}</span>
+                <input name="company" required className={fieldCls} />
+              </label>
+              <label className="block">
+                <span className="font-mono-label text-slate">{content.fields.contactPerson[lang]}</span>
+                <input name="contact" required className={fieldCls} />
+              </label>
+              <label className="block">
+                <span className="font-mono-label text-slate">{content.fields.email[lang]}</span>
+                <input name="email" type="email" required className={fieldCls} />
+              </label>
+              <label className="block">
+                <span className="font-mono-label text-slate">{content.fields.phone[lang]}</span>
+                <input name="phone" type="tel" className={fieldCls} />
+              </label>
+              <label className="block">
+                <span className="font-mono-label text-slate">{content.fields.origin[lang]}</span>
+                <input name="origin" required className={fieldCls} />
+              </label>
+              <label className="block">
+                <span className="font-mono-label text-slate">{content.fields.destination[lang]}</span>
+                <input name="destination" required className={fieldCls} />
+              </label>
+            </div>
+            <label className="block">
+              <span className="font-mono-label text-slate">{content.fields.cargo[lang]}</span>
+              <textarea name="cargo" rows={4} className={fieldCls} />
+            </label>
+            <button
+              type="submit"
+              className="group inline-flex items-center gap-3 bg-gold text-obsidian px-7 py-4 rounded-full font-semibold hover:bg-gold-400 transition-colors"
+            >
+              {sent ? '✓ ' : ''}{content.submit[lang]}
+              <Send className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+            </button>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,50 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IDA SPEED | International Logistics</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0A0B0F" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Primary Meta Tags -->
+    <title>IDA SPEED — Международна Автомобилна Логистика | Европа · Турция · Русия</title>
+    <meta name="description" content="IDA SPEED е B2B логистичен оператор за сухопътен транспорт между Европа, Турция и Русия. FTL, LTL, експресен превоз, температурен режим и митническа експертиза." />
+    <meta name="keywords" content="IDA SPEED, международна логистика, сухопътен транспорт, FTL, LTL, Европа Турция Русия, uluslararası nakliye, Avrupa Türkiye Rusya lojistik, международные грузоперевозки, customs broker, freight forwarding" />
+    <meta name="author" content="IDA SPEED" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="geo.region" content="BG-22" />
+    <meta name="geo.placename" content="Sofia" />
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.idaspeed.com/" />
+    <link rel="alternate" href="https://www.idaspeed.com/" hreflang="bg" />
+    <link rel="alternate" href="https://www.idaspeed.com/?lang=tr" hreflang="tr" />
+    <link rel="alternate" href="https://www.idaspeed.com/?lang=en" hreflang="en" />
+    <link rel="alternate" href="https://www.idaspeed.com/?lang=ru" hreflang="ru" />
+    <link rel="alternate" href="https://www.idaspeed.com/" hreflang="x-default" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="IDA SPEED" />
+    <meta property="og:url" content="https://www.idaspeed.com/" />
+    <meta property="og:title" content="IDA SPEED — Премиум Логистика между Европа, Турция и Русия" />
+    <meta property="og:description" content="B2B сухопътен транспорт: FTL, LTL, експресни доставки, температурен режим и митническа координация. Собствен автопарк. 24/7 диспечер." />
+    <meta property="og:image" content="https://www.idaspeed.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="bg_BG" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IDA SPEED — Road Logistics Europe · Türkiye · Russia" />
+    <meta name="twitter:description" content="Specialised B2B road freight: FTL, LTL, express, reefer and customs. Own fleet. 24/7 dispatch." />
+    <meta name="twitter:image" content="https://www.idaspeed.com/og-image.jpg" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind (Play CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Space Grotesk', 'Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
             },
             colors: {
-              brand: {
-                navy: '#0f172a',
-                red: '#dc2626',
-                gray: '#f3f4f6'
-              }
-            }
+              obsidian: '#0A0B0F',
+              ink: '#12141B',
+              graphite: '#1C1F29',
+              steel: '#2A2E3B',
+              slate: '#8B8F9E',
+              cream: '#F5F1E8',
+              gold: {
+                DEFAULT: '#E8B64F',
+                400: '#F2C76B',
+                500: '#E8B64F',
+                600: '#C99832',
+              },
+            },
+            letterSpacing: { tightest: '-0.04em' },
+            animation: {
+              'marquee': 'marquee 40s linear infinite',
+              'fade-up': 'fadeUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(24px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
           },
         },
-      }
+      };
     </script>
+
     <style>
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: #0A0B0F;
+        color: #F5F1E8;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      ::selection { background: #E8B64F; color: #0A0B0F; }
+      .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.02em; }
+      .font-mono-label { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.72rem; }
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(245,241,232,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(245,241,232,0.04) 1px, transparent 1px);
+        background-size: 56px 56px;
+      }
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #F2C76B 0%, #E8B64F 50%, #C99832 100%);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      .hairline { border-color: rgba(245,241,232,0.08); }
+      .hover-lift { transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, background .35s; }
+      .hover-lift:hover { transform: translateY(-4px); }
+      .radial-fade {
+        background: radial-gradient(ellipse at top, rgba(232,182,79,0.10), transparent 60%),
+                    radial-gradient(ellipse at bottom, rgba(232,182,79,0.04), transparent 60%);
+      }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "vite": "https://aistudiocdn.com/vite@^7.2.4",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
-  }
-}
-</script>
-</head>
-  <body>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"Organization",
+      "name":"IDA SPEED","url":"https://www.idaspeed.com/",
+      "logo":"https://www.idaspeed.com/logo.png",
+      "description":"B2B road freight operator connecting Europe, Türkiye and Russia. FTL, LTL, express, temperature-controlled transport and customs coordination.",
+      "foundingLocation":{"@type":"Place","name":"Sofia, Bulgaria"},
+      "areaServed":["EU","TR","RU","GE","DE","IT","BG","BE","NL"],
+      "knowsLanguage":["bg","tr","en","ru"],
+      "sameAs":["https://www.linkedin.com/company/idaspeed"],
+      "contactPoint":[{"@type":"ContactPoint","contactType":"customer service","availableLanguage":["Bulgarian","Turkish","English","Russian"],"areaServed":["EU","TR","RU"]}]
+    }
+    </script>
+
+    <!-- Structured Data: LocalBusiness (HQ) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"MovingCompany",
+      "name":"IDA SPEED Sofia HQ","image":"https://www.idaspeed.com/og-image.jpg",
+      "url":"https://www.idaspeed.com/","priceRange":"€€",
+      "address":{"@type":"PostalAddress","addressLocality":"Sofia","addressCountry":"BG"},
+      "geo":{"@type":"GeoCoordinates","latitude":42.6977,"longitude":23.3219},
+      "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}]
+    }
+    </script>
+
+    <!-- Structured Data: Service catalog -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"Service",
+      "serviceType":"International Road Freight",
+      "provider":{"@type":"Organization","name":"IDA SPEED"},
+      "areaServed":["Europe","Türkiye","Russia"],
+      "hasOfferCatalog":{"@type":"OfferCatalog","name":"IDA SPEED Logistics Services",
+        "itemListElement":[
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Full Truckload (FTL)"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Less-Than-Truckload (LTL)"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Express Road Freight"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Temperature-Controlled Transport"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Customs Coordination"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cargo Consolidation"}}
+        ]}
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"IDA SPEED","url":"https://www.idaspeed.com/","inLanguage":["bg","tr","en","ru"]}
+    </script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^18.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^18.2.0/",
+        "react/": "https://aistudiocdn.com/react@^18.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.344.0"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-obsidian text-cream">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-obsidian focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
     <div id="root"></div>
+    <noscript>
+      <div style="padding:2rem;color:#F5F1E8;background:#0A0B0F;font-family:sans-serif;">
+        <h1>IDA SPEED — International Road Logistics</h1>
+        <p>B2B freight forwarding between Europe, Türkiye and Russia: FTL, LTL, express, temperature-controlled transport and customs coordination. Contact: <a style="color:#E8B64F" href="mailto:info@idaspeed.com">info@idaspeed.com</a>.</p>
+      </div>
+    </noscript>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

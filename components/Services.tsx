@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, Zap, FileCheck, Warehouse, Thermometer, Boxes } from 'lucide-react';
+import { Truck, Zap, FileCheck, Warehouse, Thermometer, Boxes, ArrowUpRight } from 'lucide-react';
 import { Language, Content } from '../types';
 
 interface ServicesProps {
@@ -8,42 +8,55 @@ interface ServicesProps {
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  Truck: <Truck className="h-8 w-8" />,
-  Zap: <Zap className="h-8 w-8" />,
-  FileCheck: <FileCheck className="h-8 w-8" />,
-  Warehouse: <Warehouse className="h-8 w-8" />,
-  Thermometer: <Thermometer className="h-8 w-8" />,
-  Boxes: <Boxes className="h-8 w-8" />,
+  Truck: <Truck className="h-7 w-7" strokeWidth={1.4} />,
+  Zap: <Zap className="h-7 w-7" strokeWidth={1.4} />,
+  FileCheck: <FileCheck className="h-7 w-7" strokeWidth={1.4} />,
+  Warehouse: <Warehouse className="h-7 w-7" strokeWidth={1.4} />,
+  Thermometer: <Thermometer className="h-7 w-7" strokeWidth={1.4} />,
+  Boxes: <Boxes className="h-7 w-7" strokeWidth={1.4} />,
+};
+
+const labels = {
+  section: { bg: 'Услуги', tr: 'Hizmetler', en: 'Services', ru: 'Услуги' },
+  kicker: { bg: 'Пълен спектър логистични решения', tr: 'Tam kapsamlı lojistik çözümleri', en: 'Full-spectrum logistics solutions', ru: 'Полный спектр логистики' },
 };
 
 const Services: React.FC<ServicesProps> = ({ lang, content }) => {
   return (
-    <div id="services" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">{content.title[lang]}</h2>
-          <div className="h-1.5 w-24 bg-brand-red mx-auto rounded-full"></div>
+    <section id="services" className="relative py-28 lg:py-36 bg-ink">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="flex items-center gap-4 font-mono-label text-gold">
+          <span>02 — {labels.section[lang]}</span>
+          <span className="hairline border-t flex-1" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {content.items.map((item, index) => (
-            <div key={index} className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-brand-red/20 relative overflow-hidden">
-              {/* Hover Accent */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              
-              <div className="h-16 w-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 text-brand-navy transform group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(220,38,38,0.4)]">
+        <div className="mt-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tightest text-cream max-w-3xl leading-[1.05]">
+            {content.title[lang]}
+          </h2>
+          <p className="text-slate text-lg max-w-md">{labels.kicker[lang]}</p>
+        </div>
+
+        <ul className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-steel/40 border hairline rounded-2xl overflow-hidden">
+          {content.items.map((item, i) => (
+            <li
+              key={i}
+              className="group relative bg-ink p-8 lg:p-10 hover-lift hover:bg-graphite"
+            >
+              <div className="flex items-start justify-between">
+                <span className="font-mono-label text-gold/70">{String(i + 1).padStart(2, '0')}</span>
+                <ArrowUpRight className="w-4 h-4 text-slate group-hover:text-gold transition-colors" />
+              </div>
+              <div className="mt-10 w-12 h-12 rounded-full border hairline flex items-center justify-center text-gold group-hover:border-gold transition-colors">
                 {iconMap[item.icon]}
               </div>
-              
-              <h3 className="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-red transition-colors">{item.title[lang]}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {item.desc[lang]}
-              </p>
-            </div>
+              <h3 className="mt-6 font-display text-2xl font-semibold text-cream leading-snug">{item.title[lang]}</h3>
+              <p className="mt-3 text-slate leading-relaxed text-sm">{item.desc[lang]}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
