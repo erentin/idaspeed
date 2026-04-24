@@ -236,7 +236,7 @@ const Globe3D: React.FC = () => {
       stars.rotation.y += 0.0003;
 
       // pulse primary rings
-      globeGroup.children.forEach((obj) => {
+      globeGroup.children.forEach((obj: THREE.Object3D) => {
         if ((obj as any).userData?.pulseBase) {
           const m = obj as THREE.Mesh;
           const base = (m.userData.pulseBase as number);
@@ -270,7 +270,7 @@ const Globe3D: React.FC = () => {
       window.removeEventListener('resize', onResize);
       if (renderer.domElement.parentNode === mount) mount.removeChild(renderer.domElement);
       renderer.dispose();
-      scene.traverse((o) => {
+      scene.traverse((o: THREE.Object3D) => {
         const any = o as any;
         if (any.geometry) any.geometry.dispose?.();
         if (any.material) {
