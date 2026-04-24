@@ -45,6 +45,14 @@ const CITIES = [
   { name: 'Bursa',     lat: 40.1828, lng: 29.0665 },
   { name: 'Ankara',    lat: 39.9334, lng: 32.8597 },
   { name: 'Manchester',lat: 53.4808, lng: -2.2426 },
+  // Nordics & Baltics & CEE — added coverage
+  { name: 'Helsinki',  lat: 60.1699, lng: 24.9384 },
+  { name: 'Tallinn',   lat: 59.4370, lng: 24.7536 },
+  { name: 'Riga',      lat: 56.9496, lng: 24.1052 },
+  { name: 'Vilnius',   lat: 54.6872, lng: 25.2797 },
+  { name: 'Warsaw',    lat: 52.2297, lng: 21.0122 },
+  { name: 'Prague',    lat: 50.0755, lng: 14.4378 },
+  { name: 'Bratislava',lat: 48.1486, lng: 17.1077 },
 ];
 
 const ROUTES: Array<[string, string]> = [
@@ -62,6 +70,14 @@ const ROUTES: Array<[string, string]> = [
   ['Belgrade', 'Sofia'],
   ['Sofia', 'Bursa'],
   ['Sofia', 'Ankara'],
+  // New Nordic/Baltic/CEE corridors
+  ['Helsinki', 'Sofia'],
+  ['Tallinn', 'Sofia'],
+  ['Riga', 'Sofia'],
+  ['Vilnius', 'Sofia'],
+  ['Warsaw', 'Istanbul'],
+  ['Prague', 'Istanbul'],
+  ['Bratislava', 'Istanbul'],
 ];
 
 const Globe3D: React.FC = () => {

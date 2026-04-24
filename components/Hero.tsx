@@ -9,12 +9,12 @@ interface HeroProps {
 
 const KPIS = [
   { k: '23+', labels: { bg: 'Години опит', tr: 'Yıl Deneyim', en: 'Years of Expertise', ru: 'Лет опыта' } },
-  { k: '50+', labels: { bg: 'Автопарк', tr: 'Filo', en: 'Fleet', ru: 'Автопарк' } },
+  { k: 'BG·TR·UK', labels: { bg: 'Основни коридори', tr: 'Ana Koridorlar', en: 'Core Corridors', ru: 'Основные коридоры' } },
   { k: '24/7', labels: { bg: 'Диспечерски контрол', tr: 'Dispeçer Desteği', en: 'Dispatch Support', ru: 'Диспетчер' } },
-  { k: 'EU · TR · UK', labels: { bg: 'Пазари', tr: 'Pazarlarımız', en: 'Markets served', ru: 'Рынки' } },
+  { k: '30+', labels: { bg: 'Партньорска мрежа', tr: 'Partner Ağı', en: 'Partner Network', ru: 'Партнёрская сеть' } },
 ];
 
-const MARQUEE = ['FTL', 'LTL', 'EXPRESS', 'REEFER', 'CUSTOMS', 'CONSOLIDATION', 'B2B', 'EU · TR · UK'];
+const MARQUEE = ['FTL', 'LTL', 'EXPRESS', 'REEFER', 'CUSTOMS', 'CONSOLIDATION', 'B2B', 'BULGARIA · TÜRKİYE · UNITED KINGDOM'];
 
 const Hero: React.FC<HeroProps> = ({ lang, content }) => {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
         <div className="flex items-center gap-4 font-mono-label text-slate">
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-            <span className="text-gold">Live · UK · EU · TR</span>
+            <span className="text-gold">Live · BG · TR · UK</span>
           </span>
           <span className="hairline border-l h-4" />
           <span>Sofia HQ · Bulgaria</span>

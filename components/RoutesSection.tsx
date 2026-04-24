@@ -35,18 +35,34 @@ const CorridorMap: React.FC = () => (
     <path d="M 140 140 C 280 70, 380 80, 450 170" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
     <path d="M 450 170 C 560 200, 620 230, 700 220" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
     <path d="M 60 140 C 260 260, 500 260, 700 220" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 8" opacity="0.6" />
+    {/* Nordic / Baltic / CEE feeder arcs to Sofia */}
+    <path d="M 520 30 C 500 80, 470 120, 450 170" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.7" />
+    <path d="M 500 45 C 480 90, 465 130, 450 170" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.6" />
+    <path d="M 480 65 C 470 100, 460 140, 450 170" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.55" />
+    <path d="M 460 90 C 455 120, 452 150, 450 170" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.5" />
+    <path d="M 420 80 C 430 110, 440 140, 450 170" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.55" />
+    <path d="M 330 60 C 370 100, 410 140, 450 170" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.55" />
+    <path d="M 370 120 C 395 140, 425 160, 450 170" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 6" opacity="0.55" />
     {/* nodes */}
     {[
       { x: 60,  y: 140, label: 'London' },
       { x: 140, y: 140, label: 'Frankfurt' },
       { x: 310, y: 100, label: 'Milano' },
-      { x: 450, y: 170, label: 'Sofia' },
-      { x: 700, y: 220, label: 'Istanbul' },
+      { x: 450, y: 170, label: 'Sofia', primary: true },
+      { x: 700, y: 220, label: 'Istanbul', primary: true },
+      // Nordic / Baltic / CEE
+      { x: 520, y: 30,  label: 'Helsinki' },
+      { x: 500, y: 45,  label: 'Tallinn' },
+      { x: 480, y: 65,  label: 'Riga' },
+      { x: 460, y: 90,  label: 'Vilnius' },
+      { x: 420, y: 80,  label: 'Warsaw' },
+      { x: 330, y: 60,  label: 'Prague' },
+      { x: 370, y: 120, label: 'Bratislava' },
     ].map((n) => (
       <g key={n.label}>
-        <circle cx={n.x} cy={n.y} r="14" fill="#0A0F1A" stroke="#EE333F" strokeWidth="2" />
-        <circle cx={n.x} cy={n.y} r="4" fill="#EE333F" />
-        <text x={n.x + 20} y={n.y + 5} fill="#F5F1E8" fontSize="14" fontFamily="Space Grotesk, sans-serif" fontWeight="500">{n.label}</text>
+        <circle cx={n.x} cy={n.y} r={n.primary ? 14 : 10} fill="#0A0F1A" stroke="#EE333F" strokeWidth="2" />
+        <circle cx={n.x} cy={n.y} r={n.primary ? 4 : 3} fill="#EE333F" />
+        <text x={n.x + (n.primary ? 20 : 14)} y={n.y + 5} fill="#F5F1E8" fontSize={n.primary ? 14 : 11} fontFamily="Space Grotesk, sans-serif" fontWeight="500">{n.label}</text>
       </g>
     ))}
   </svg>

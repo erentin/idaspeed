@@ -10,16 +10,16 @@ export const CONTENT: Content = {
   },
   hero: {
     headline: {
-      bg: "Премиум логистика между Европа и Турция",
-      tr: "Avrupa ve Türkiye Arasında Premium Lojistik",
-      en: "Premium Road Logistics Connecting Europe & Türkiye",
-      ru: "Премиум логистика между Европой и Турцией"
+      bg: "Премиум логистика между България, Турция и Великобритания",
+      tr: "Bulgaristan, Türkiye ve Birleşik Krallık Arasında Premium Lojistik",
+      en: "Premium Road Logistics Across Bulgaria, Türkiye & the United Kingdom",
+      ru: "Премиум логистика между Болгарией, Турцией и Великобританией"
     },
     subheadline: {
-      bg: "Вашият стратегически партньор за надеждни FTL и LTL превози. Бързина, сигурност и митническа експертиза за вашия бизнес.",
-      tr: "Güvenilir FTL ve LTL taşımacılığı için stratejik ortağınız. İşiniz için hız, güvenlik ve gümrük uzmanlığı.",
-      en: "Your strategic partner for reliable FTL and LTL freight. Speed, security, and customs expertise for your business.",
-      ru: "Ваш стратегический партнер по надежным FTL и LTL перевозкам. Скорость, безопасность и таможенная экспертиза."
+      bg: "Вашият стратегически партньор за надеждни FTL и LTL превози по основните коридори София – Истанбул – Лондон. Бързина, сигурност и митническа експертиза за вашия бизнес.",
+      tr: "Sofya – İstanbul – Londra ana koridorlarında güvenilir FTL ve LTL taşımacılığı için stratejik ortağınız. İşiniz için hız, güvenlik ve gümrük uzmanlığı.",
+      en: "Your strategic partner for reliable FTL and LTL freight on the Sofia – Istanbul – London corridors. Speed, security and customs expertise for your business.",
+      ru: "Ваш стратегический партнёр по надёжным FTL и LTL перевозкам на ключевых коридорах София – Стамбул – Лондон. Скорость, безопасность и таможенная экспертиза."
     },
     ctaPrimary: { bg: "Поискай Оферта", tr: "Teklif İste", en: "Request a Quote", ru: "Запросить Цену" },
     ctaSecondary: { bg: "Свържете се с нас", tr: "Bize Ulaşın", en: "Contact Us", ru: "Связаться с нами" }
@@ -27,10 +27,10 @@ export const CONTENT: Content = {
   about: {
     title: { bg: "За IDA SPEED", tr: "IDA SPEED Hakkında", en: "About IDA SPEED", ru: "О Компании IDA SPEED" },
     desc1: {
-      bg: "Ние сме специализирана транспортна компания, фокусирана върху сухопътния превоз на товари между Европа, Великобритания и Турция. С над 23 години опит и доказан партньорски автопарк гарантираме сигурност и прецизност.",
-      tr: "Avrupa, İngiltere ve Türkiye arasında karayolu yük taşımacılığına odaklanmış uzman bir lojistik şirketiyiz. 23 yılı aşkın deneyim ve güvenilir filo iş birlikleriyle güvenlik ve hassasiyeti garanti ediyoruz.",
-      en: "We are a specialized transport company focused on road freight between Europe, the United Kingdom and Türkiye. With 23+ years of experience and a reliable partner fleet, we guarantee security and precision.",
-      ru: "Мы специализированная транспортная компания, ориентированная на автоперевозки грузов между Европой, Великобританией и Турцией. Благодаря более чем 23-летнему опыту и надёжному партнёрскому автопарку мы гарантируем безопасность и точность."
+      bg: "Ние сме специализирана спедиторска компания, фокусирана върху сухопътния превоз на товари между България, Турция и Великобритания. С над 23 години опит и проверена партньорска мрежа от превозвачи гарантираме сигурност и прецизност.",
+      tr: "Bulgaristan, Türkiye ve Birleşik Krallık arasında karayolu yük taşımacılığına odaklanmış uzman bir lojistik şirketiyiz. 23 yılı aşkın deneyim ve doğrulanmış partner taşıyıcı ağımızla güvenlik ve hassasiyeti garanti ediyoruz.",
+      en: "We are a specialised freight forwarder focused on road transport between Bulgaria, Türkiye and the United Kingdom. With 23+ years of experience and a vetted partner carrier network, we guarantee security and precision.",
+      ru: "Мы — специализированная экспедиторская компания, специализирующаяся на автоперевозках между Болгарией, Турцией и Великобританией. Более 23 лет опыта и проверенная сеть партнёров-перевозчиков гарантируют безопасность и точность."
     },
     desc2: {
       bg: "Нашите B2B клиенти избират IDA SPEED заради безкомпромисното спазване на сроковете и дълбокото познаване на митническите регулации по нашите ключови коридори.",
