@@ -11,7 +11,7 @@ const labels = {
   section: { bg: 'Коридори', tr: 'Koridorlar', en: 'Corridors', ru: 'Коридоры' },
 };
 
-// Corridor nodes: Frankfurt, Sofia, Istanbul, Moscow — stylised map
+// Corridor nodes: Frankfurt → Sofia → Istanbul — stylised map
 const CorridorMap: React.FC = () => (
   <svg viewBox="0 0 800 360" className="w-full h-auto" aria-hidden="true">
     <defs>
@@ -31,15 +31,14 @@ const CorridorMap: React.FC = () => (
       ))}
     </g>
     {/* corridor arcs */}
-    <path d="M 110 140 C 250 60, 360 60, 420 150" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
-    <path d="M 420 150 C 520 180, 580 220, 680 200" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
-    <path d="M 420 150 C 450 260, 560 300, 700 260" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" opacity="0.6" />
+    <path d="M 140 140 C 280 70, 380 80, 450 170" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
+    <path d="M 450 170 C 560 200, 620 230, 700 220" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
     {/* nodes */}
     {[
-      { x: 110, y: 140, label: 'Frankfurt' },
-      { x: 420, y: 150, label: 'Sofia' },
-      { x: 680, y: 200, label: 'Istanbul' },
-      { x: 700, y: 260, label: 'Moscow' },
+      { x: 140, y: 140, label: 'Frankfurt' },
+      { x: 310, y: 100, label: 'Milano' },
+      { x: 450, y: 170, label: 'Sofia' },
+      { x: 700, y: 220, label: 'Istanbul' },
     ].map((n) => (
       <g key={n.label}>
         <circle cx={n.x} cy={n.y} r="14" fill="#0A0B0F" stroke="#E8B64F" strokeWidth="2" />

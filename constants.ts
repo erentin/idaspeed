@@ -10,10 +10,10 @@ export const CONTENT: Content = {
   },
   hero: {
     headline: {
-      bg: "Премиум логистика между Европа, Турция и Русия",
-      tr: "Avrupa, Türkiye ve Rusya Arasında Premium Lojistik",
-      en: "Premium Road Logistics Connecting Europe, Turkey & Russia",
-      ru: "Премиум логистика между Европой, Турцией и Россией"
+      bg: "Премиум логистика между Европа и Турция",
+      tr: "Avrupa ve Türkiye Arasında Premium Lojistik",
+      en: "Premium Road Logistics Connecting Europe & Türkiye",
+      ru: "Премиум логистика между Европой и Турцией"
     },
     subheadline: {
       bg: "Вашият стратегически партньор за надеждни FTL и LTL превози. Бързина, сигурност и митническа експертиза за вашия бизнес.",
@@ -27,10 +27,10 @@ export const CONTENT: Content = {
   about: {
     title: { bg: "За IDA SPEED", tr: "IDA SPEED Hakkında", en: "About IDA SPEED", ru: "О Компании IDA SPEED" },
     desc1: {
-      bg: "Ние сме специализирана транспортна компания, фокусирана върху сухопътния превоз на товари между Европа, Турция и Русия. С дългогодишен опит и собствен автопарк, ние гарантираме сигурност и прецизност.",
-      tr: "Avrupa, Türkiye ve Rusya arasında karayolu yük taşımacılığına odaklanmış uzman bir lojistik şirketiyiz. Yılların deneyimi ve kendi filomuzla güvenlik ve hassasiyeti garanti ediyoruz.",
-      en: "We are a specialized transport company focused on road freight between Europe, Turkey, and Russia. With years of experience and our own fleet, we guarantee security and precision.",
-      ru: "Мы специализированная транспортная компания, ориентированная на автоперевозки грузов между Европой, Турцией и Россией. Благодаря многолетнему опыту и собственному автопарку мы гарантируем безопасность."
+      bg: "Ние сме специализирана транспортна компания, фокусирана върху сухопътния превоз на товари между Европа и Турция. С над 23 години опит и доказан партньорски автопарк гарантираме сигурност и прецизност.",
+      tr: "Avrupa ve Türkiye arasında karayolu yük taşımacılığına odaklanmış uzman bir lojistik şirketiyiz. 23 yılı aşkın deneyim ve güvenilir filo iş birlikleriyle güvenlik ve hassasiyeti garanti ediyoruz.",
+      en: "We are a specialized transport company focused on road freight between Europe and Türkiye. With 23+ years of experience and a reliable partner fleet, we guarantee security and precision.",
+      ru: "Мы специализированная транспортная компания, ориентированная на автоперевозки грузов между Европой и Турцией. Благодаря более чем 23-летнему опыту и надёжному партнёрскому автопарку мы гарантируем безопасность и точность."
     },
     desc2: {
       bg: "Нашите B2B клиенти избират IDA SPEED заради безкомпромисното спазване на сроковете и дълбокото познаване на митническите регулации по нашите ключови коридори.",
@@ -145,41 +145,41 @@ export const CONTENT: Content = {
   routes: {
     title: { bg: "Основни Коридори", tr: "Ana Koridorlar", en: "Main Corridors", ru: "Основные Маршруты" },
     desc: {
-      bg: "Ние свързваме индустриалните зони на Европа с пазарите на Турция и Русия.",
-      tr: "Avrupa'nın sanayi bölgelerini Türkiye ve Rusya pazarlarına bağlıyoruz.",
-      en: "We connect the industrial zones of Europe with the markets of Turkey and Russia.",
-      ru: "Мы соединяем промышленные зоны Европы с рынками Турции и России."
+      bg: "Ние свързваме индустриалните зони на Европа с пазара на Турция.",
+      tr: "Avrupa'nın sanayi bölgelerini Türkiye pazarına bağlıyoruz.",
+      en: "We connect the industrial zones of Europe with the Turkish market.",
+      ru: "Мы соединяем промышленные зоны Европы с рынком Турции."
     },
     items: [
       {
-        title: { bg: "Европа ↔ Турция", tr: "Avrupa ↔ Türkiye", en: "Europe ↔ Turkey", ru: "Европа ↔ Турция" },
-        desc: { 
-          bg: "Ежедневни линии от Германия, Италия, Бенелюкс до Истанбул и Бурса.", 
-          tr: "Almanya, İtalya, Benelüks'ten İstanbul ve Bursa'ya günlük hatlar.",
-          en: "Daily lines from Germany, Italy, Benelux to Istanbul and Bursa.",
-          ru: "Ежедневные рейсы из Германии, Италии, Бенилюкса в Стамбул и Бурсу."
+        title: { bg: "Европа ↔ Турция", tr: "Avrupa ↔ Türkiye", en: "Europe ↔ Türkiye", ru: "Европа ↔ Турция" },
+        desc: {
+          bg: "Ежедневни линии от Германия, Италия и Бенелюкс до Истанбул и Бурса.",
+          tr: "Almanya, İtalya ve Benelüks'ten İstanbul ve Bursa'ya günlük hatlar.",
+          en: "Daily lines from Germany, Italy and Benelux to Istanbul and Bursa.",
+          ru: "Ежедневные рейсы из Германии, Италии и Бенилюкса в Стамбул и Бурсу."
         },
         time: { bg: "Транзит: 4-6 дни", tr: "Transit: 4-6 Gün", en: "Transit: 4-6 Days", ru: "Транзит: 4-6 дней" }
       },
       {
-        title: { bg: "Турция ↔ Русия", tr: "Türkiye ↔ Rusya", en: "Turkey ↔ Russia", ru: "Турция ↔ Россия" },
-        desc: { 
-          bg: "Директен сухопътен транспорт през Грузия за Москва и регионите.", 
-          tr: "Moskova ve bölgeler için Gürcistan üzerinden doğrudan karayolu taşımacılığı.",
-          en: "Direct road transport via Georgia to Moscow and the regions.",
-          ru: "Прямые автоперевозки через Грузию в Москву и регионы."
+        title: { bg: "Балкани ↔ Турция", tr: "Balkanlar ↔ Türkiye", en: "Balkans ↔ Türkiye", ru: "Балканы ↔ Турция" },
+        desc: {
+          bg: "Редовни курсове между София, Пловдив, Букурещ, Белград и Истанбул.",
+          tr: "Sofya, Plovdiv, Bükreş, Belgrad ve İstanbul arasında düzenli seferler.",
+          en: "Regular runs between Sofia, Plovdiv, Bucharest, Belgrade and Istanbul.",
+          ru: "Регулярные рейсы между Софией, Пловдивом, Бухарестом, Белградом и Стамбулом."
         },
-        time: { bg: "Транзит: 8-12 дни", tr: "Transit: 8-12 Gün", en: "Transit: 8-12 Days", ru: "Транзит: 8-12 дней" }
+        time: { bg: "Транзит: 1-3 дни", tr: "Transit: 1-3 Gün", en: "Transit: 1-3 Days", ru: "Транзит: 1-3 дня" }
       },
       {
-        title: { bg: "Европа ↔ Русия", tr: "Avrupa ↔ Rusya", en: "Europe ↔ Russia", ru: "Европа ↔ Россия" },
-        desc: { 
-          bg: "Надеждни алтернативни маршрути през Турция за санкционирани и несанкционирани товари.", 
-          tr: "Yaptırımlı ve yaptırımsız yükler için Türkiye üzerinden güvenilir alternatif rotalar.",
-          en: "Reliable alternative routes via Turkey for general cargo.",
-          ru: "Надежные альтернативные маршруты через Турцию."
+        title: { bg: "България ↔ Европа", tr: "Bulgaristan ↔ Avrupa", en: "Bulgaria ↔ Europe", ru: "Болгария ↔ Европа" },
+        desc: {
+          bg: "Редовни групажни и пълни товари към Германия, Австрия, Бенелюкс и Италия.",
+          tr: "Almanya, Avusturya, Benelüks ve İtalya'ya düzenli parsiyel ve komple yükler.",
+          en: "Regular LTL and FTL to Germany, Austria, Benelux and Italy.",
+          ru: "Регулярные сборные и полные грузы в Германию, Австрию, Бенилюкс и Италию."
         },
-        time: { bg: "Транзит: 14-18 дни", tr: "Transit: 14-18 Gün", en: "Transit: 14-18 Days", ru: "Транзит: 14-18 дней" }
+        time: { bg: "Транзит: 3-5 дни", tr: "Transit: 3-5 Gün", en: "Transit: 3-5 Days", ru: "Транзит: 3-5 дней" }
       }
     ]
   },
@@ -192,7 +192,7 @@ export const CONTENT: Content = {
       },
       {
         title: { bg: "Надеждност", tr: "Güvenilirlik", en: "Reliability", ru: "Надежность" },
-        desc: { bg: "Гарантирани доставки със собствена флота.", tr: "Kendi filomuzla garantili teslimatlar.", en: "Guaranteed deliveries with our own fleet.", ru: "Гарантированные поставки." }
+        desc: { bg: "Гарантирани доставки с проверени партньорски превозвачи.", tr: "Güvenilir filo iş birlikleriyle garantili teslimatlar.", en: "Guaranteed deliveries through a vetted partner fleet.", ru: "Гарантированные поставки с проверенными партнёрами." }
       },
       {
         title: { bg: "Експертиза", tr: "Uzmanlık", en: "Expertise", ru: "Экспертиза" },
@@ -259,21 +259,24 @@ export const CONTENT: Content = {
   },
   contact: {
     title: { bg: "Контакти", tr: "İletişim", en: "Contact Us", ru: "Контакты" },
-    subtitle: { bg: "Нашите офиси и представителства.", tr: "Ofislerimiz ve temsilciliklerimiz.", en: "Our offices and representatives.", ru: "Наши офисы и представительства." },
+    subtitle: {
+      bg: "Свържете се с нашия екип в София.",
+      tr: "Sofya'daki ekibimizle iletişime geçin.",
+      en: "Get in touch with our team in Sofia.",
+      ru: "Свяжитесь с нашей командой в Софии."
+    },
     offices: {
-      sofia: { bg: "София, България (Централа)", tr: "Sofya, Bulgaristan (Merkez)", en: "Sofia, Bulgaria (HQ)", ru: "София, Болгария (Офис)" },
-      istanbul: { bg: "Истанбул, Турция", tr: "İstanbul, Türkiye", en: "Istanbul, Turkey", ru: "Стамбул, Турция" },
-      moscow: { bg: "Москва, Русия", tr: "Moskova, Rusya", en: "Moscow, Russia", ru: "Москва, Россия" }
+      sofia: { bg: "София, България (Централен офис)", tr: "Sofya, Bulgaristan (Merkez Ofis)", en: "Sofia, Bulgaria (Headquarters)", ru: "София, Болгария (Главный офис)" }
     }
   },
   footer: {
-    about: { 
-      bg: "IDA SPEED е вашият надежден партньор за логистика между Изтока и Запада.", 
-      tr: "IDA SPEED, Doğu ile Batı arasındaki lojistikte güvenilir ortağınızdır.", 
-      en: "IDA SPEED is your trusted partner for logistics between East and West.", 
-      ru: "IDA SPEED — ваш надежный партнер в логистике между Востоком и Западом." 
+    about: {
+      bg: "„ИДА СПИЙД“ ЕООД — вашият надежден партньор за логистика между Европа и Турция.",
+      tr: "„IDA SPEED“ LTD — Avrupa ile Türkiye arasındaki lojistikte güvenilir ortağınız.",
+      en: "„IDA SPEED“ LTD — your trusted partner for logistics between Europe and Türkiye.",
+      ru: "„IDA SPEED“ LTD — ваш надёжный партнёр в логистике между Европой и Турцией."
     },
-    copyright: { bg: "© 2024 IDA SPEED. Всички права запазени.", tr: "© 2024 IDA SPEED. Tüm hakları saklıdır.", en: "© 2024 IDA SPEED. All rights reserved.", ru: "© 2024 IDA SPEED. Все права защищены." },
+    copyright: { bg: "© 2026 „ИДА СПИЙД“ ЕООД. Всички права запазени.", tr: "© 2026 „IDA SPEED“ LTD. Tüm hakları saklıdır.", en: "© 2026 „IDA SPEED“ LTD. All rights reserved.", ru: "© 2026 „IDA SPEED“ LTD. Все права защищены." },
     privacy: { bg: "Политика за поверителност", tr: "Gizlilik Politikası", en: "Privacy Policy", ru: "Политика конфиденциальности" },
     terms: { bg: "Общи условия", tr: "Kullanım Şartları", en: "Terms of Service", ru: "Условия использования" }
   }

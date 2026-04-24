@@ -122,8 +122,6 @@ export interface Content {
     subtitle: LocalizedText;
     offices: {
       sofia: LocalizedText;
-      istanbul: LocalizedText;
-      moscow: LocalizedText;
     }
   };
   footer: {

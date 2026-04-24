@@ -8,13 +8,13 @@ interface HeroProps {
 }
 
 const KPIS = [
-  { k: '15+', labels: { bg: 'Години опит', tr: 'Yıl Deneyim', en: 'Years of Expertise', ru: 'Лет опыта' } },
-  { k: '50+', labels: { bg: 'Собствени превозни', tr: 'Kendi Aracımız', en: 'Own Fleet Units', ru: 'Ед. собственного парка' } },
+  { k: '23+', labels: { bg: 'Години опит', tr: 'Yıl Deneyim', en: 'Years of Expertise', ru: 'Лет опыта' } },
+  { k: '50+', labels: { bg: 'Автопарк', tr: 'Filo', en: 'Fleet', ru: 'Автопарк' } },
   { k: '24/7', labels: { bg: 'Диспечерски контрол', tr: 'Dispeçer Desteği', en: 'Dispatch Support', ru: 'Диспетчер' } },
-  { k: '3', labels: { bg: 'Континента', tr: 'Kıta', en: 'Continents', ru: 'Континента' } },
+  { k: 'EU · TR', labels: { bg: 'Пазари', tr: 'Pazarlarımız', en: 'Markets served', ru: 'Рынки' } },
 ];
 
-const MARQUEE = ['FTL', 'LTL', 'EXPRESS', 'REEFER', 'CUSTOMS', 'CONSOLIDATION', 'B2B', 'EU · TR · RU'];
+const MARQUEE = ['FTL', 'LTL', 'EXPRESS', 'REEFER', 'CUSTOMS', 'CONSOLIDATION', 'B2B', 'EU · TR'];
 
 const Hero: React.FC<HeroProps> = ({ lang, content }) => {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -29,10 +29,10 @@ const Hero: React.FC<HeroProps> = ({ lang, content }) => {
         <div className="flex items-center gap-4 font-mono-label text-slate">
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-            <span className="text-gold">Live · EU → TR → RU</span>
+            <span className="text-gold">Live · EU ↔ TR</span>
           </span>
           <span className="hairline border-l h-4" />
-          <span>Sofia · Istanbul · Moscow</span>
+          <span>Sofia HQ · Bulgaria</span>
         </div>
 
         {/* headline */}

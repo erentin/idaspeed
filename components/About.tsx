@@ -8,7 +8,7 @@ interface AboutProps {
 
 const labels = {
   section: { bg: 'За нас', tr: 'Hakkımızda', en: 'About', ru: 'О нас' },
-  pill: { bg: 'Собствен автопарк · B2B', tr: 'Kendi Filomuz · B2B', en: 'Own Fleet · B2B', ru: 'Собственный парк · B2B' },
+  pill: { bg: 'Автопарк · B2B', tr: 'Filo · B2B', en: 'Fleet · B2B', ru: 'Автопарк · B2B' },
 };
 
 const About: React.FC<AboutProps> = ({ lang, content }) => {

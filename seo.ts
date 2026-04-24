@@ -8,16 +8,16 @@ export const SEO: {
   ogLocale: LangMap;
 } = {
   title: {
-    bg: 'IDA SPEED — Международна автомобилна логистика | Европа · Турция · Русия',
-    tr: 'IDA SPEED — Uluslararası Karayolu Lojistiği | Avrupa · Türkiye · Rusya',
-    en: 'IDA SPEED — International Road Logistics | Europe · Türkiye · Russia',
-    ru: 'IDA SPEED — Международная автомобильная логистика | Европа · Турция · Россия',
+    bg: 'IDA SPEED — Международна автомобилна логистика | Европа · Турция',
+    tr: 'IDA SPEED — Uluslararası Karayolu Lojistiği | Avrupa · Türkiye',
+    en: 'IDA SPEED — International Road Logistics | Europe · Türkiye',
+    ru: 'IDA SPEED — Международная автомобильная логистика | Европа · Турция',
   },
   description: {
-    bg: 'B2B сухопътен транспорт между Европа, Турция и Русия: FTL, LTL, експресни доставки, температурен режим и митническа координация. Собствен автопарк, 24/7 диспечер.',
-    tr: 'Avrupa, Türkiye ve Rusya arasında B2B karayolu taşımacılığı: FTL, LTL, ekspres, frigorifik ve gümrük koordinasyonu. Kendi filomuz, 7/24 dispeçer.',
-    en: 'B2B road freight between Europe, Türkiye and Russia: FTL, LTL, express, temperature-controlled transport and customs coordination. Own fleet, 24/7 dispatch.',
-    ru: 'B2B автомобильные перевозки между Европой, Турцией и Россией: FTL, LTL, экспресс, рефрижератор, таможенная координация. Собственный парк, диспетчер 24/7.',
+    bg: '„ИДА СПИЙД“ ЕООД — B2B сухопътен транспорт между Европа и Турция: FTL, LTL, експресни доставки, температурен режим и митническа координация. София — 23+ години опит, 24/7 диспечер.',
+    tr: 'Avrupa ile Türkiye arasında B2B karayolu taşımacılığı: FTL, LTL, ekspres, frigorifik ve gümrük koordinasyonu. Sofya merkezli, 23+ yıl deneyim, 7/24 dispeçer.',
+    en: 'B2B road freight between Europe and Türkiye: FTL, LTL, express, temperature-controlled transport and customs coordination. Sofia-based, 23+ years of experience, 24/7 dispatch.',
+    ru: 'B2B автомобильные перевозки между Европой и Турцией: FTL, LTL, экспресс, рефрижератор, таможенная координация. София — 23+ лет опыта, диспетчер 24/7.',
   },
   ogLocale: {
     bg: 'bg_BG',

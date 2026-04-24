@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { Language, Content } from '../types';
 
 interface ContactProps {
@@ -9,31 +9,32 @@ interface ContactProps {
 
 const labels = {
   section: { bg: 'Контакти', tr: 'İletişim', en: 'Contact', ru: 'Контакты' },
+  addressLabel: { bg: 'Адрес', tr: 'Adres', en: 'Address', ru: 'Адрес' },
+  emailLabel: { bg: 'Ел. поща', tr: 'E-posta', en: 'Email', ru: 'E-mail' },
+  phoneLabel: { bg: 'Телефон', tr: 'Telefon', en: 'Phone', ru: 'Телефон' },
+  whatsappLabel: { bg: 'WhatsApp', tr: 'WhatsApp', en: 'WhatsApp', ru: 'WhatsApp' },
+  legal: { bg: 'Правно наименование', tr: 'Resmi Ünvan', en: 'Legal name', ru: 'Юр. наименование' },
 };
 
-const OFFICES = [
-  {
-    key: 'sofia',
-    code: 'BG',
-    address: ['Brussels Blvd 1, Sofia Airport Center', '1592 Sofia, Bulgaria'],
-    phone: '+359 2 999 9999',
-    email: 'office@idaspeed.com',
-  },
-  {
-    key: 'istanbul',
-    code: 'TR',
-    address: ['Halkalı Merkez, Basın Ekspres Yolu', '34303 Istanbul, Türkiye'],
-    phone: '+90 212 999 9999',
-    email: 'tr@idaspeed.com',
-  },
-  {
-    key: 'moscow',
-    code: 'RU',
-    address: ['Presnenskaya Naberezhnaya 12', '123317 Moscow, Russia'],
-    phone: '+7 495 999 9999',
-    email: 'ru@idaspeed.com',
-  },
-] as const;
+const ADDRESS = {
+  bg: 'гр. София 1360, ж.к. Модерно предградие, ул. Професор Янаки Моллов № 1',
+  tr: 'Sofya 1360, Moderno Predgradie, Prof. Yanaki Mollov Cad. No: 1',
+  en: 'Sofia 1360, Moderno Predgradie district, 1 Prof. Yanaki Mollov Str.',
+  ru: 'г. София 1360, ж.к. Модерно предградие, ул. Профессор Янаки Моллов, № 1',
+};
+
+const LEGAL_NAME: Record<Language, string> = {
+  bg: '„ИДА СПИЙД“ ЕООД',
+  tr: '„IDA SPEED“ LTD',
+  en: '„IDA SPEED“ LTD',
+  ru: '„IDA SPEED“ LTD',
+};
+
+const EMAIL = 'ida.speed@abv.bg';
+const PHONE_DISPLAY = '+359 87 611 6239';
+const PHONE_TEL = '+359876116239';
+const WHATSAPP_DISPLAY = '+90 538 305 15 32';
+const WHATSAPP_NUMBER = '905383051532';
 
 const Contact: React.FC<ContactProps> = ({ lang, content }) => {
   return (
@@ -51,30 +52,98 @@ const Contact: React.FC<ContactProps> = ({ lang, content }) => {
           <p className="text-slate text-lg">{content.subtitle[lang]}</p>
         </div>
 
-        <ul className="mt-16 grid md:grid-cols-3 gap-5">
-          {OFFICES.map((o) => (
-            <li key={o.key} className="p-8 bg-ink border hairline rounded-2xl hover-lift hover:border-gold/40">
-              <div className="flex items-center justify-between">
-                <span className="font-mono-label text-gold">{o.code}</span>
-                <span className="w-2 h-2 rounded-full bg-gold" />
+        <div className="mt-16 grid lg:grid-cols-12 gap-5">
+          {/* Office card */}
+          <article className="lg:col-span-7 p-8 lg:p-10 bg-ink border hairline rounded-2xl">
+            <div className="flex items-center justify-between">
+              <span className="font-mono-label text-gold">BG · HQ</span>
+              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+            </div>
+
+            <h3 className="mt-6 font-display text-3xl lg:text-4xl font-semibold text-cream leading-tight">
+              {content.offices.sofia[lang]}
+            </h3>
+
+            <div className="mt-8 grid md:grid-cols-2 gap-6">
+              <div>
+                <div className="font-mono-label text-slate">{labels.addressLabel[lang]}</div>
+                <address className="not-italic mt-2 text-cream leading-relaxed">
+                  <span className="inline-flex items-start gap-2">
+                    <MapPin className="w-4 h-4 text-gold mt-1 shrink-0" />
+                    <span>{ADDRESS[lang]}</span>
+                  </span>
+                </address>
               </div>
-              <h3 className="mt-6 font-display text-2xl font-semibold text-cream">
-                {content.offices[o.key][lang]}
-              </h3>
-              <address className="not-italic mt-4 text-slate leading-relaxed text-sm">
-                {o.address.map((l) => (<div key={l}>{l}</div>))}
-              </address>
-              <div className="mt-6 space-y-2 text-sm">
-                <a href={`tel:${o.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-cream hover:text-gold transition-colors">
-                  <Phone className="w-4 h-4 text-gold" /> {o.phone}
-                </a>
-                <a href={`mailto:${o.email}`} className="flex items-center gap-2 text-cream hover:text-gold transition-colors">
-                  <Mail className="w-4 h-4 text-gold" /> {o.email}
-                </a>
+              <div className="space-y-4">
+                <div>
+                  <div className="font-mono-label text-slate">{labels.phoneLabel[lang]}</div>
+                  <a href={`tel:${PHONE_TEL}`} className="mt-2 inline-flex items-center gap-2 text-cream hover:text-gold transition-colors">
+                    <Phone className="w-4 h-4 text-gold" /> {PHONE_DISPLAY}
+                  </a>
+                </div>
+                <div>
+                  <div className="font-mono-label text-slate">{labels.whatsappLabel[lang]}</div>
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center gap-2 text-cream hover:text-gold transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4 text-gold" /> {WHATSAPP_DISPLAY}
+                  </a>
+                </div>
+                <div>
+                  <div className="font-mono-label text-slate">{labels.emailLabel[lang]}</div>
+                  <a href={`mailto:${EMAIL}`} className="mt-2 inline-flex items-center gap-2 text-cream hover:text-gold transition-colors">
+                    <Mail className="w-4 h-4 text-gold" /> {EMAIL}
+                  </a>
+                </div>
+                <div>
+                  <div className="font-mono-label text-slate">{labels.legal[lang]}</div>
+                  <p className="mt-2 text-cream font-display">{LEGAL_NAME[lang]}</p>
+                </div>
               </div>
-            </li>
-          ))}
-        </ul>
+            </div>
+          </article>
+
+          {/* Direct mail CTA */}
+          <aside className="lg:col-span-5 p-8 lg:p-10 border hairline rounded-2xl bg-gradient-to-br from-graphite to-ink flex flex-col justify-between">
+            <div>
+              <span className="font-mono-label text-gold">Direct line</span>
+              <p className="mt-6 font-display text-2xl lg:text-3xl text-cream leading-snug">
+                {lang === 'bg' && 'Пишете ни директно — отговаряме в рамките на 2 часа.'}
+                {lang === 'tr' && 'Bize doğrudan yazın — 2 saat içinde dönüş yapıyoruz.'}
+                {lang === 'en' && 'Write to us directly — we reply within 2 hours.'}
+                {lang === 'ru' && 'Напишите нам напрямую — отвечаем в течение 2 часов.'}
+              </p>
+            </div>
+            <div className="mt-8 flex flex-col gap-3">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gold text-obsidian px-6 py-4 rounded-full font-semibold hover:bg-gold-400 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp · {WHATSAPP_DISPLAY}
+              </a>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center justify-center gap-2 border hairline text-cream px-6 py-4 rounded-full font-semibold hover:border-gold/60 transition-colors"
+              >
+                <Phone className="w-4 h-4 text-gold" />
+                {PHONE_DISPLAY}
+              </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="inline-flex items-center justify-center gap-2 text-slate hover:text-gold transition-colors text-sm"
+              >
+                <Mail className="w-4 h-4" />
+                {EMAIL}
+              </a>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
   );
