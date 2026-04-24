@@ -16,9 +16,9 @@ const CorridorMap: React.FC = () => (
   <svg viewBox="0 0 800 360" className="w-full h-auto" aria-hidden="true">
     <defs>
       <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stopColor="#E8B64F" stopOpacity="0.1" />
-        <stop offset="50%" stopColor="#E8B64F" stopOpacity="1" />
-        <stop offset="100%" stopColor="#E8B64F" stopOpacity="0.1" />
+        <stop offset="0%" stopColor="#EE333F" stopOpacity="0.1" />
+        <stop offset="50%" stopColor="#EE333F" stopOpacity="1" />
+        <stop offset="100%" stopColor="#EE333F" stopOpacity="0.1" />
       </linearGradient>
     </defs>
     {/* grid */}
@@ -31,18 +31,21 @@ const CorridorMap: React.FC = () => (
       ))}
     </g>
     {/* corridor arcs */}
+    <path d="M 60 140 C 200 60, 320 80, 450 170" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
     <path d="M 140 140 C 280 70, 380 80, 450 170" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
     <path d="M 450 170 C 560 200, 620 230, 700 220" fill="none" stroke="url(#line)" strokeWidth="2" strokeDasharray="6 6" />
+    <path d="M 60 140 C 260 260, 500 260, 700 220" fill="none" stroke="url(#line)" strokeWidth="1.5" strokeDasharray="4 8" opacity="0.6" />
     {/* nodes */}
     {[
+      { x: 60,  y: 140, label: 'London' },
       { x: 140, y: 140, label: 'Frankfurt' },
       { x: 310, y: 100, label: 'Milano' },
       { x: 450, y: 170, label: 'Sofia' },
       { x: 700, y: 220, label: 'Istanbul' },
     ].map((n) => (
       <g key={n.label}>
-        <circle cx={n.x} cy={n.y} r="14" fill="#0A0B0F" stroke="#E8B64F" strokeWidth="2" />
-        <circle cx={n.x} cy={n.y} r="4" fill="#E8B64F" />
+        <circle cx={n.x} cy={n.y} r="14" fill="#0A0F1A" stroke="#EE333F" strokeWidth="2" />
+        <circle cx={n.x} cy={n.y} r="4" fill="#EE333F" />
         <text x={n.x + 20} y={n.y + 5} fill="#F5F1E8" fontSize="14" fontFamily="Space Grotesk, sans-serif" fontWeight="500">{n.label}</text>
       </g>
     ))}

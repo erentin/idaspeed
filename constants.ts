@@ -27,10 +27,10 @@ export const CONTENT: Content = {
   about: {
     title: { bg: "За IDA SPEED", tr: "IDA SPEED Hakkında", en: "About IDA SPEED", ru: "О Компании IDA SPEED" },
     desc1: {
-      bg: "Ние сме специализирана транспортна компания, фокусирана върху сухопътния превоз на товари между Европа и Турция. С над 23 години опит и доказан партньорски автопарк гарантираме сигурност и прецизност.",
-      tr: "Avrupa ve Türkiye arasında karayolu yük taşımacılığına odaklanmış uzman bir lojistik şirketiyiz. 23 yılı aşkın deneyim ve güvenilir filo iş birlikleriyle güvenlik ve hassasiyeti garanti ediyoruz.",
-      en: "We are a specialized transport company focused on road freight between Europe and Türkiye. With 23+ years of experience and a reliable partner fleet, we guarantee security and precision.",
-      ru: "Мы специализированная транспортная компания, ориентированная на автоперевозки грузов между Европой и Турцией. Благодаря более чем 23-летнему опыту и надёжному партнёрскому автопарку мы гарантируем безопасность и точность."
+      bg: "Ние сме специализирана транспортна компания, фокусирана върху сухопътния превоз на товари между Европа, Великобритания и Турция. С над 23 години опит и доказан партньорски автопарк гарантираме сигурност и прецизност.",
+      tr: "Avrupa, İngiltere ve Türkiye arasında karayolu yük taşımacılığına odaklanmış uzman bir lojistik şirketiyiz. 23 yılı aşkın deneyim ve güvenilir filo iş birlikleriyle güvenlik ve hassasiyeti garanti ediyoruz.",
+      en: "We are a specialized transport company focused on road freight between Europe, the United Kingdom and Türkiye. With 23+ years of experience and a reliable partner fleet, we guarantee security and precision.",
+      ru: "Мы специализированная транспортная компания, ориентированная на автоперевозки грузов между Европой, Великобританией и Турцией. Благодаря более чем 23-летнему опыту и надёжному партнёрскому автопарку мы гарантируем безопасность и точность."
     },
     desc2: {
       bg: "Нашите B2B клиенти избират IDA SPEED заради безкомпромисното спазване на сроковете и дълбокото познаване на митническите регулации по нашите ключови коридори.",
@@ -145,21 +145,31 @@ export const CONTENT: Content = {
   routes: {
     title: { bg: "Основни Коридори", tr: "Ana Koridorlar", en: "Main Corridors", ru: "Основные Маршруты" },
     desc: {
-      bg: "Ние свързваме индустриалните зони на Европа с пазара на Турция.",
-      tr: "Avrupa'nın sanayi bölgelerini Türkiye pazarına bağlıyoruz.",
-      en: "We connect the industrial zones of Europe with the Turkish market.",
-      ru: "Мы соединяем промышленные зоны Европы с рынком Турции."
+      bg: "Свързваме индустриална Европа и Великобритания с пазара на Турция — с ежедневни линии.",
+      tr: "Avrupa ve İngiltere'nin sanayi bölgelerini Türkiye pazarına günlük hatlarla bağlıyoruz.",
+      en: "We connect industrial Europe and the United Kingdom with the Turkish market through daily lines.",
+      ru: "Мы соединяем промышленную Европу и Великобританию с рынком Турции ежедневными рейсами."
     },
     items: [
       {
         title: { bg: "Европа ↔ Турция", tr: "Avrupa ↔ Türkiye", en: "Europe ↔ Türkiye", ru: "Европа ↔ Турция" },
         desc: {
-          bg: "Ежедневни линии от Германия, Италия и Бенелюкс до Истанбул и Бурса.",
-          tr: "Almanya, İtalya ve Benelüks'ten İstanbul ve Bursa'ya günlük hatlar.",
-          en: "Daily lines from Germany, Italy and Benelux to Istanbul and Bursa.",
-          ru: "Ежедневные рейсы из Германии, Италии и Бенилюкса в Стамбул и Бурсу."
+          bg: "Ежедневни линии от Германия, Италия, Франция и Бенелюкс до Истанбул и Бурса.",
+          tr: "Almanya, İtalya, Fransa ve Benelüks'ten İstanbul ve Bursa'ya günlük hatlar.",
+          en: "Daily lines from Germany, Italy, France and Benelux to Istanbul and Bursa.",
+          ru: "Ежедневные рейсы из Германии, Италии, Франции и Бенилюкса в Стамбул и Бурсу."
         },
         time: { bg: "Транзит: 4-6 дни", tr: "Transit: 4-6 Gün", en: "Transit: 4-6 Days", ru: "Транзит: 4-6 дней" }
+      },
+      {
+        title: { bg: "Великобритания ↔ Турция", tr: "İngiltere ↔ Türkiye", en: "United Kingdom ↔ Türkiye", ru: "Великобритания ↔ Турция" },
+        desc: {
+          bg: "Линии от Лондон, Манчестър и Бърминъм с парижки ro-ro връзки към Истанбул.",
+          tr: "Londra, Manchester ve Birmingham'dan Dover – Calais üzerinden İstanbul'a.",
+          en: "Lines from London, Manchester and Birmingham via Dover – Calais roll-on/roll-off to Istanbul.",
+          ru: "Маршруты из Лондона, Манчестера и Бирмингема через Dover – Calais в Стамбул."
+        },
+        time: { bg: "Транзит: 6-9 дни", tr: "Transit: 6-9 Gün", en: "Transit: 6-9 Days", ru: "Транзит: 6-9 дней" }
       },
       {
         title: { bg: "Балкани ↔ Турция", tr: "Balkanlar ↔ Türkiye", en: "Balkans ↔ Türkiye", ru: "Балканы ↔ Турция" },
@@ -172,14 +182,14 @@ export const CONTENT: Content = {
         time: { bg: "Транзит: 1-3 дни", tr: "Transit: 1-3 Gün", en: "Transit: 1-3 Days", ru: "Транзит: 1-3 дня" }
       },
       {
-        title: { bg: "България ↔ Европа", tr: "Bulgaristan ↔ Avrupa", en: "Bulgaria ↔ Europe", ru: "Болгария ↔ Европа" },
+        title: { bg: "България ↔ Европа & UK", tr: "Bulgaristan ↔ Avrupa & İngiltere", en: "Bulgaria ↔ Europe & UK", ru: "Болгария ↔ Европа и Великобритания" },
         desc: {
-          bg: "Редовни групажни и пълни товари към Германия, Австрия, Бенелюкс и Италия.",
-          tr: "Almanya, Avusturya, Benelüks ve İtalya'ya düzenli parsiyel ve komple yükler.",
-          en: "Regular LTL and FTL to Germany, Austria, Benelux and Italy.",
-          ru: "Регулярные сборные и полные грузы в Германию, Австрию, Бенилюкс и Италию."
+          bg: "Групажни и пълни товари към Германия, Австрия, Бенелюкс, Италия, Скандинавия и Великобритания.",
+          tr: "Almanya, Avusturya, Benelüks, İtalya, İskandinavya ve İngiltere'ye parsiyel ve komple yükler.",
+          en: "LTL and FTL to Germany, Austria, Benelux, Italy, Scandinavia and the UK.",
+          ru: "Сборные и полные грузы в Германию, Австрию, Бенилюкс, Италию, Скандинавию и Великобританию."
         },
-        time: { bg: "Транзит: 3-5 дни", tr: "Transit: 3-5 Gün", en: "Transit: 3-5 Days", ru: "Транзит: 3-5 дней" }
+        time: { bg: "Транзит: 3-7 дни", tr: "Transit: 3-7 Gün", en: "Transit: 3-7 Days", ru: "Транзит: 3-7 дней" }
       }
     ]
   },

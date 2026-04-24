@@ -49,19 +49,21 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content }) => {
       aria-label="Primary"
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <button
             onClick={() => scrollTo('hero')}
             className="group flex items-center gap-3"
             aria-label="IDA SPEED — home"
           >
-            <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" className="transition-transform group-hover:rotate-[-8deg]">
-              <path d="M10 44 L32 16 L54 44 Z" fill="none" stroke="#E8B64F" strokeWidth="4" strokeLinejoin="round" />
-              <circle cx="32" cy="38" r="3.5" fill="#E8B64F" />
-            </svg>
-            <span className="font-display text-xl font-bold tracking-tightest">
-              IDA <span className="text-gold">SPEED</span>
+            <span className="inline-flex items-center bg-cream rounded-xl px-3 py-1.5 shadow-[0_4px_20px_-4px_rgba(238,51,63,0.35)] ring-1 ring-white/10 transition-transform group-hover:scale-[1.04]">
+              <img
+                src="/images/idaspeed-preview.png"
+                alt="IDA SPEED"
+                width={180}
+                height={56}
+                className="h-10 lg:h-12 w-auto"
+              />
             </span>
           </button>
 

@@ -17,12 +17,8 @@ const Footer: React.FC<FooterProps> = ({ lang, content }) => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
           <div className="max-w-xl">
             <div className="flex items-center gap-3 mb-6">
-              <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
-                <path d="M10 44 L32 16 L54 44 Z" fill="none" stroke="#E8B64F" strokeWidth="4" strokeLinejoin="round" />
-                <circle cx="32" cy="38" r="3.5" fill="#E8B64F" />
-              </svg>
-              <span className="font-display text-xl font-bold tracking-tightest">
-                IDA <span className="text-gold">SPEED</span>
+              <span className="inline-flex items-center bg-cream rounded-xl px-3 py-2 ring-1 ring-white/10">
+                <img src="/images/idaspeed-preview.png" alt="IDA SPEED" width={200} height={64} className="h-12 lg:h-14 w-auto" />
               </span>
             </div>
             <p className="text-slate text-sm leading-relaxed">{content.about[lang]}</p>
