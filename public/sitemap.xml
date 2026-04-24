@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.idaspeed.com/</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.idaspeed.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.idaspeed.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.idaspeed.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.idaspeed.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.idaspeed.com/"/>
+    <image:image>
+      <image:loc>https://www.idaspeed.com/images/idaspeed-preview.png</image:loc>
+      <image:title>IDA SPEED — Europe · Türkiye · UK road freight forwarder</image:title>
+      <image:caption>IDA SPEED LTD — B2B international road logistics, Sofia, Bulgaria</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.idaspeed.com/?lang=tr</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.idaspeed.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.idaspeed.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.idaspeed.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.idaspeed.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.idaspeed.com/"/>
+  </url>
+  <url>
+    <loc>https://www.idaspeed.com/?lang=en</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.idaspeed.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.idaspeed.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.idaspeed.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.idaspeed.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.idaspeed.com/"/>
+  </url>
+  <url>
+    <loc>https://www.idaspeed.com/?lang=ru</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="bg" href="https://www.idaspeed.com/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.idaspeed.com/?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.idaspeed.com/?lang=en"/>

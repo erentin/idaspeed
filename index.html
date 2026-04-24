@@ -32,9 +32,10 @@
     <meta property="og:url" content="https://www.idaspeed.com/" />
     <meta property="og:title" content="Europe – Türkiye – UK Road Freight Forwarder | IDA SPEED LTD" />
     <meta property="og:description" content="B2B international road freight: FTL, LTL groupage, express, reefer and customs. Covering Europe, Türkiye and the United Kingdom from Sofia. 23+ years of expertise. 24/7 dispatch." />
-    <meta property="og:image" content="https://www.idaspeed.com/og-image.jpg" />
+    <meta property="og:image" content="https://www.idaspeed.com/images/idaspeed-preview.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="IDA SPEED — International road freight forwarder, Sofia, Bulgaria" />
     <meta property="og:locale" content="bg_BG" />
     <meta property="og:locale:alternate" content="tr_TR" />
     <meta property="og:locale:alternate" content="en_US" />
@@ -44,7 +45,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Europe · Türkiye · UK Road Freight | IDA SPEED LTD" />
     <meta name="twitter:description" content="Specialised B2B road freight between Europe, Türkiye and the United Kingdom. FTL, LTL, express, reefer and customs. 23+ years of experience. 24/7 dispatch." />
-    <meta name="twitter:image" content="https://www.idaspeed.com/og-image.jpg" />
+    <meta name="twitter:image" content="https://www.idaspeed.com/images/idaspeed-preview.png" />
+    <meta name="twitter:image:alt" content="IDA SPEED — Europe · Türkiye · UK road freight forwarder" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -54,6 +56,9 @@
     <!-- Performance hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://aistudiocdn.com" />
+    <link rel="preload" as="image" href="/images/idaspeed-preview.png" fetchpriority="high" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -144,28 +149,66 @@
     <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
-      "@context":"https://schema.org","@type":"Organization",
-      "name":"„ИДА СПИЙД“ ЕООД","alternateName":"„IDA SPEED“ LTD",
+      "@context":"https://schema.org","@type":"Organization","@id":"https://www.idaspeed.com/#organization",
+      "name":"„ИДА СПИЙД“ ЕООД","alternateName":["IDA SPEED LTD","IDA SPEED"],
+      "legalName":"ИДА СПИЙД ЕООД",
       "url":"https://www.idaspeed.com/",
-      "logo":"https://www.idaspeed.com/images/idaspeed-preview.png",
+      "logo":{"@type":"ImageObject","url":"https://www.idaspeed.com/images/idaspeed-preview.png","width":512,"height":512},
+      "image":"https://www.idaspeed.com/images/idaspeed-preview.png",
       "email":"ida.speed@abv.bg",
       "telephone":"+359876116239",
+      "foundingDate":"2003",
+      "slogan":"Europe · Türkiye · United Kingdom — reliable B2B road freight",
       "sameAs":["https://wa.me/905383051532"],
-      "description":"B2B road freight operator connecting Europe and Türkiye. FTL, LTL, express, temperature-controlled transport and customs coordination.",
+      "description":"B2B international road freight forwarder connecting Europe, Türkiye and the United Kingdom. FTL, LTL groupage, express, temperature-controlled transport and customs coordination. Sofia, Bulgaria.",
       "foundingLocation":{"@type":"Place","name":"Sofia, Bulgaria"},
       "areaServed":["EU","TR","GB","BG","DE","IT","BE","NL","AT","FR","SE","DK","RO","RS"],
       "knowsLanguage":["bg","tr","en","ru"],
-      "address":{"@type":"PostalAddress","streetAddress":"ul. Prof. Yanaki Mollov 1, zh.k. Moderno Predgradie","postalCode":"1360","addressLocality":"Sofia","addressCountry":"BG"},
-      "contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"ida.speed@abv.bg","telephone":"+359876116239","availableLanguage":["Bulgarian","Turkish","English","Russian"],"areaServed":["EU","TR","GB"]}]
+      "knowsAbout":["International road freight","FTL full truckload","LTL groupage","Express road freight","Reefer transport","Customs clearance","Europe Türkiye logistics","UK road freight","Kapikule border","B2B logistics"],
+      "address":{"@type":"PostalAddress","streetAddress":"ul. Prof. Yanaki Mollov 1, zh.k. Moderno Predgradie","postalCode":"1360","addressLocality":"Sofia","addressRegion":"Sofia-grad","addressCountry":"BG"},
+      "contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"ida.speed@abv.bg","telephone":"+359876116239","availableLanguage":["Bulgarian","Turkish","English","Russian"],"areaServed":["EU","TR","GB"]},{"@type":"ContactPoint","contactType":"sales","telephone":"+905383051532","availableLanguage":["Turkish","English"],"contactOption":"TollFree"}]
     }
     </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.idaspeed.com/"},
+        {"@type":"ListItem","position":2,"name":"Services","item":"https://www.idaspeed.com/#services"},
+        {"@type":"ListItem","position":3,"name":"Routes & Corridors","item":"https://www.idaspeed.com/#routes"},
+        {"@type":"ListItem","position":4,"name":"Contact","item":"https://www.idaspeed.com/#contact"}
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage (rich result candidate) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Which countries does IDA SPEED serve?","acceptedAnswer":{"@type":"Answer","text":"IDA SPEED operates across Europe, Türkiye and the United Kingdom. Core corridors include Germany, Italy, Benelux, Austria, France, Scandinavia, Romania, Serbia, Bulgaria, Türkiye and the UK (London, Manchester)."}},
+        {"@type":"Question","name":"What types of freight services do you offer?","acceptedAnswer":{"@type":"Answer","text":"Full Truckload (FTL), Less-Than-Truckload / groupage (LTL), express road freight, temperature-controlled (reefer) transport, cargo consolidation and end-to-end customs coordination."}},
+        {"@type":"Question","name":"How long does Europe to Türkiye road freight take?","acceptedAnswer":{"@type":"Answer","text":"Typical transit times: Germany–Istanbul 4–6 days, Italy–Istanbul 4–5 days, Benelux–Istanbul 5–7 days, UK–Istanbul 6–9 days. Express options are available on request."}},
+        {"@type":"Question","name":"Do you handle customs clearance?","acceptedAnswer":{"@type":"Answer","text":"Yes. We coordinate customs at Kapikule, Hamzabeyli, Dover and other EU/TR/UK border crossings, including T1/T2 transit documents, ATR, EUR.1 and import/export procedures."}},
+        {"@type":"Question","name":"How fast can I get a quote?","acceptedAnswer":{"@type":"Answer","text":"We respond with a binding quote within 2 hours during business hours. Our dispatch line is available 24/7 for urgent shipments."}},
+        {"@type":"Question","name":"Where is IDA SPEED headquartered?","acceptedAnswer":{"@type":"Answer","text":"Our head office is in Sofia, Bulgaria (ul. Prof. Yanaki Mollov 1, 1360 Sofia), with 23+ years of operational experience in international road freight."}},
+        {"@type":"Question","name":"Do you work with Bulgarian, Turkish, English and Russian speaking customers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our dispatch team communicates fluently in Bulgarian, Turkish, English and Russian."}}
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Organization (legacy placeholder removed) -->
 
     <!-- Structured Data: LocalBusiness (HQ) -->
     <script type="application/ld+json">
     {
       "@context":"https://schema.org","@type":"MovingCompany",
+      "@id":"https://www.idaspeed.com/#hq",
       "name":"„ИДА СПИЙД“ ЕООД — Sofia HQ",
-      "image":"https://www.idaspeed.com/og-image.jpg",
+      "parentOrganization":{"@id":"https://www.idaspeed.com/#organization"},
+      "image":"https://www.idaspeed.com/images/idaspeed-preview.png",
       "url":"https://www.idaspeed.com/","priceRange":"€€",
       "email":"ida.speed@abv.bg",
       "telephone":"+359876116239",
@@ -214,9 +257,43 @@
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-obsidian focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
     <div id="root"></div>
     <noscript>
-      <div style="padding:2rem;color:#F5F1E8;background:#0A0B0F;font-family:sans-serif;">
-        <h1>IDA SPEED — International Road Logistics</h1>
-        <p>B2B freight forwarding between Europe and Türkiye: FTL, LTL, express, temperature-controlled transport and customs coordination. Contact: <a style="color:#EE333F" href="mailto:ida.speed@abv.bg">ida.speed@abv.bg</a>.</p>
+      <div style="padding:2rem;color:#F5F1E8;background:#0A0F1A;font-family:sans-serif;max-width:960px;margin:0 auto;line-height:1.6;">
+        <h1 style="font-size:2rem;margin:0 0 .5rem 0;">IDA SPEED — International Road Freight Forwarder</h1>
+        <p style="color:#8B95A8;margin:0 0 1.5rem 0;">Europe · Türkiye · United Kingdom — B2B road logistics from Sofia, Bulgaria. 23+ years of experience.</p>
+
+        <h2>Services</h2>
+        <ul>
+          <li>Full Truckload (FTL) road freight across Europe, Türkiye and the UK</li>
+          <li>Less-Than-Truckload (LTL) / groupage consolidation</li>
+          <li>Express road freight with guaranteed transit times</li>
+          <li>Temperature-controlled (reefer) transport for pharma and food</li>
+          <li>End-to-end customs coordination at Kapikule, Hamzabeyli, Dover</li>
+          <li>Cargo consolidation and warehousing support</li>
+        </ul>
+
+        <h2>Corridors</h2>
+        <ul>
+          <li>Germany ↔ Türkiye (Istanbul, Bursa, Ankara) — 4–6 days</li>
+          <li>Italy ↔ Türkiye — 4–5 days</li>
+          <li>Benelux ↔ Türkiye — 5–7 days</li>
+          <li>United Kingdom ↔ Türkiye (London, Manchester) — 6–9 days</li>
+          <li>Bulgaria ↔ Europe — 2–4 days</li>
+          <li>Scandinavia ↔ Türkiye — 6–8 days</li>
+        </ul>
+
+        <h2>Услуги (Bulgarian)</h2>
+        <p>„ИДА СПИЙД“ ЕООД — международен автомобилен транспорт и спедиция между Европа, Турция и Великобритания. FTL, LTL групаж, експресни доставки, хладилен транспорт и митнически услуги. София — 23+ години опит.</p>
+
+        <h2>Hizmetler (Turkish)</h2>
+        <p>IDA SPEED LTD — Avrupa, Türkiye ve İngiltere arası B2B karayolu nakliyesi. FTL, LTL parsiyel, ekspres, frigorifik taşıma ve gümrük koordinasyonu. Sofya merkezli 23+ yıl deneyim, 7/24 dispeçer.</p>
+
+        <h2>Услуги (Russian)</h2>
+        <p>IDA SPEED LTD — международные автомобильные перевозки между Европой, Турцией и Великобританией. FTL, LTL сборные, экспресс, рефрижераторы и таможенное сопровождение. София — 23+ лет опыта.</p>
+
+        <h2>Contact</h2>
+        <p>„ИДА СПИЙД“ ЕООД · ul. Prof. Yanaki Mollov 1, zh.k. Moderno Predgradie, 1360 Sofia, Bulgaria<br/>
+        Phone: <a style="color:#EE333F" href="tel:+359876116239">+359 87 611 6239</a> · WhatsApp: <a style="color:#EE333F" href="https://wa.me/905383051532">+90 538 305 15 32</a><br/>
+        Email: <a style="color:#EE333F" href="mailto:ida.speed@abv.bg">ida.speed@abv.bg</a></p>
       </div>
     </noscript>
     <script type="module" src="/index.tsx"></script>

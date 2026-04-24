@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /*.json$
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+Host: https://www.idaspeed.com
 
 Sitemap: https://www.idaspeed.com/sitemap.xml

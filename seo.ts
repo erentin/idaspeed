@@ -43,6 +43,10 @@ export const applySEO = (lang: Language) => {
     const el = document.head.querySelector<HTMLMetaElement>(selector);
     if (el) el.setAttribute(attr, value);
   };
+  const setLink = (selector: string, href: string) => {
+    const el = document.head.querySelector<HTMLLinkElement>(selector);
+    if (el) el.setAttribute('href', href);
+  };
   setMeta('meta[name="description"]', 'content', SEO.description[lang]);
   setMeta('meta[name="keywords"]', 'content', SEO.keywords[lang]);
   setMeta('meta[property="og:title"]', 'content', SEO.title[lang]);
@@ -50,4 +54,11 @@ export const applySEO = (lang: Language) => {
   setMeta('meta[property="og:locale"]', 'content', SEO.ogLocale[lang]);
   setMeta('meta[name="twitter:title"]', 'content', SEO.title[lang]);
   setMeta('meta[name="twitter:description"]', 'content', SEO.description[lang]);
+
+  // Per-language canonical + og:url so Google indexes each variant separately
+  const canonical = lang === 'bg'
+    ? 'https://www.idaspeed.com/'
+    : `https://www.idaspeed.com/?lang=${lang}`;
+  setLink('link[rel="canonical"]', canonical);
+  setMeta('meta[property="og:url"]', 'content', canonical);
 };
